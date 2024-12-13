@@ -121,6 +121,7 @@
   
   .button,.select {
     width: 100%;
+    box-sizing: border-box;
   }
   .repoItem {
     padding: 0.5rem;

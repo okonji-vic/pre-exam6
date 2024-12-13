@@ -149,7 +149,17 @@ const GitHubRepos2 = ({
           <option value="20">20 per page</option>
         </select>
       </div>
+      
       <ul className={styles.repoList}>
+      
+    {filteredRepos.length === 0 && inputValue.length != 0 && (
+      <p style={{ color: "red" }}>No repositories found for {inputValue}</p>
+    )}
+    {repos.length === 0 && inputValue2.length > 0 && (
+      <p style={{ color: "red" }}>
+        No repositories found for username {inputValue2}
+      </p>
+    )}
         {currentRepos.map((repo) => (
           <li key={repo.id} className={styles.repoItem}>
             <Link to="/about" className={styles.link} state={{ repo }}>
