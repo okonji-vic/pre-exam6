@@ -171,6 +171,27 @@ const About = ({ username, repos, itemsPerPage, currentPage, setCurrentPage }) =
               {repo.description || "No description available"}
             </p>
             <p>
+              <strong>Stars:</strong> {repo.stargazers_count}
+            </p>
+            <p>
+              <strong>Forks:</strong> {repo.forks_count}
+            </p>
+            <p>
+              <strong>Open Issues:</strong> {repo.open_issues_count}
+            </p>
+            <p>
+              <strong>Has Projects:</strong> {repo.has_projects ? "Yes" : "No"}
+            </p>
+            <p>
+              <strong>Has Downloads:</strong> {repo.has_downloads ? "Yes" : "No"}
+            </p>
+            <p>
+              <strong>Language:</strong> {repo.language || "Not specified"}
+            </p>
+            <p>
+              <strong>Default Branch:</strong> {repo.default_branch}
+            </p>
+            <p>
               <strong>Creation Date:</strong>{" "}
               {new Date(repo.created_at).toLocaleDateString()}
             </p>
