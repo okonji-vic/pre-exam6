@@ -1,0 +1,42 @@
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.notFound {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.button {
+  background-color: #0366d6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}

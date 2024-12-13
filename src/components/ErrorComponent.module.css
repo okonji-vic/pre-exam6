@@ -1,0 +1,64 @@
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+  }
+  
+  .errorTitle {
+    font-size: 2.5rem;
+    color: #dc3545;
+    margin-bottom: 1rem;
+  }
+  
+  .errorMessage {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+  
+  .homeLink {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #0366d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .homeLink:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .errorTitle {
+      font-size: 2rem;
+    }
+  
+    .errorMessage {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .errorTitle {
+      font-size: 1.5rem;
+    }
+  
+    .errorMessage {
+      font-size: 0.9rem;
+    }
+  
+    .homeLink {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  

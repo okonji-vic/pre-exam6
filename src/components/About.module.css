@@ -1,0 +1,135 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #0366d6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .singleRepo,
+  .repoCard {
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .repoDetails p,
+  .repoCard p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .repoName {
+    font-size: 1.5rem;
+    color: #0366d6;
+    margin-bottom: 1rem;
+  }
+  
+  .link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0366d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .pageButton {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pageButton:hover {
+    background-color: #e1e4e8;
+  }
+  
+  .pageButton.active {
+    background-color: #0366d6;
+    color: white;
+  }
+  
+  .backLink {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #24292e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .backLink:hover {
+    background-color: #444d56;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .repoName {
+      font-size: 1.25rem;
+    }
+  
+    .repoDetails p,
+    .repoCard p {
+      font-size: 0.9rem;
+    }
+  
+    .pageButton {
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.25rem;
+    }
+  
+    .repoName {
+      font-size: 1.1rem;
+    }
+  
+    .repoDetails p,
+    .repoCard p {
+      font-size: 0.8rem;
+    }
+  
+    .pageButton {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  
