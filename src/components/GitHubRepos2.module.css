@@ -109,7 +109,7 @@
     color: white;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 668px) {
     .form,
     .filterContainer {
       flex-direction: column;
