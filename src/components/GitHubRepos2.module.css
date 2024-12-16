@@ -7,6 +7,8 @@
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+    border: 0px solid;
+    margin-top: -15px;
   }
   
   .form {
@@ -107,6 +109,31 @@
   .activePage {
     background-color: #0366d6;
     color: white;
+  }
+  #avatarUl{
+    border: 0px solid red;
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+    
+    
+    
+  }
+  #avatarUl li{
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    border: 0px solid green;
+    padding-bottom: 0;
+    
+  }
+
+  #avatarUl li a, #avatarUl li button{
+    color: white;
+    background-color: #0366d6;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
   
   @media (max-width: 668px) {

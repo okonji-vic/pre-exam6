@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import styles from "./GitHubRepos2.module.css";
 import { Link } from "react-router-dom";
 
@@ -99,6 +99,22 @@ const GitHubRepos2 = ({
 
   return (
     <div className={styles.container}>
+      <ul id={styles.avatarUl}>
+      {currentRepos.slice(0, 1).map((repo) => (
+        <li key={repo.id} className={styles.repoItem}>
+          <img src={repo.owner.avatar_url} alt="Owner avatar" style={{width: '80px', borderRadius: '50%'}} />
+          <h3>{repo.owner.login}</h3>
+          <button>
+            <a href={repo.owner.html_url} target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
+          </button>
+          <p>{repo.owner.bio}</p>
+        </li>
+      ))}
+    </ul>
+      
+      
       <h1 className={styles.title}>GitHub Repositories for {username}</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <input

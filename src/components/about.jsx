@@ -135,7 +135,7 @@
 //     );
 //   }
 
-  import React from "react";
+  import React, { Suspense } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./About.module.css";
 
@@ -241,6 +241,7 @@ const About = ({ username, repos, itemsPerPage, currentPage, setCurrentPage }) =
               >
                 View on GitHub
               </a>
+              
             </div>
           ))}
           <div className={styles.pagination}>

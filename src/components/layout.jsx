@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Navigation from './navigation';
 import styles from './Layout.module.css';
 
@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
     <div className={styles.layout}>
       <header className={styles.header}>
         <Navigation />
+        
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>

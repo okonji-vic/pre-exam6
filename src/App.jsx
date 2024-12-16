@@ -670,7 +670,7 @@
 
 // export default App;
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import GitHubRepos2 from "./components/GitHubRepos2";
@@ -702,6 +702,7 @@ const App = () => {
       .then((data) => {
         setRepos(data);
         setLoading(false);
+        console.log(data);
       })
       .catch((err) => {
         setError(err.message);
@@ -752,6 +753,7 @@ const App = () => {
         <Route
           path="/about"
           element={
+            <Suspense fallback={<ClipLoader color="#36d7b7" size={50} />}>
             <About
               inputValue2={inputValue2}
               setInputValue2={setInputValue2}
@@ -770,6 +772,7 @@ const App = () => {
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
+            </Suspense>
           }
         />
         <Route path="/error" element={<ErrorComponent />} />
