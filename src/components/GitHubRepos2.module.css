@@ -9,6 +9,9 @@
     text-align: center;
     border: 0px solid;
     margin-top: -15px;
+    animation-name: slide-in;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
   }
   
   .form {
@@ -58,29 +61,38 @@
     padding: 0;
   }
   
-  .repoItem {
+  .repoItem, .repoAvatar {
     background-color: #f6f8fa;
     border: 1px solid #e1e4e8f1;
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
   }
+  .repoItem {
+    animation-name: slide-left;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+  }
+  .repoAvatar {
+    animation-name: slide-up;
+    animation-duration: 3s;
+  }
   
-  .repoItem h3 {
+  .repoItem h3, .repoAvatar h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
   }
   
-  .repoItem p {
+  .repoItem p, .repoAvatar p {
     margin-bottom: 0.5rem;
   }
   
-  .repoItem a {
+  .repoItem a, .repoAvatar a {
     color: #0366d6;
     text-decoration: none;
   }
   
-  .repoItem a:hover {
+  .repoItem a:hover, .repoAvatar a:hover {
     text-decoration: underline;
   }
   
@@ -134,6 +146,52 @@
     border: 0;
     padding: 5px 10px;
     border-radius: 5px;
+  }
+
+  input, select {
+    animation-name: slide-in;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    
+  }
+
+  @keyframes slide-in {
+    from {
+      margin-left: 100%;
+      width: 50%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  @keyframes slide-left {
+    from {
+      margin-left: -200%;
+      width: 0%;
+    }
+    to {
+      margin-left: 0%;
+      width: 96%;
+    }
+  }
+  @keyframes slide-up {
+    /* from {
+      margin-left: -200%;
+      height: 0%;
+    }
+    to {
+      margin-left: 0%;
+      height: 5%;
+    } */
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
   }
   
   @media (max-width: 668px) {

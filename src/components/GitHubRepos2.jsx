@@ -101,7 +101,7 @@ const GitHubRepos2 = ({
     <div className={styles.container}>
       <ul id={styles.avatarUl}>
       {currentRepos.slice(0, 1).map((repo) => (
-        <li key={repo.id} className={styles.repoItem}>
+        <li key={repo.id} className={styles.repoAvatar}>
           <img src={repo.owner.avatar_url} alt="Owner avatar" style={{width: '80px', borderRadius: '50%'}} />
           <h3>{repo.owner.login}</h3>
           <button>
