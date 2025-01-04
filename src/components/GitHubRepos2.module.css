@@ -213,7 +213,7 @@
     width: 100%;
     box-sizing: border-box;
   }
-  .repoItem {
+  .repoItem, .repoAvatar {
     padding: 0.5rem;
     width: 95%;
   }
