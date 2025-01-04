@@ -37,6 +37,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    animation: slide-left 4s ease-in-out;
   }
   
   .button:hover {
@@ -157,22 +158,26 @@
 
   @keyframes slide-in {
     from {
-      margin-left: 100%;
-      width: 50%;
+      /* margin-left: 100%;
+      width: 50%; */
+      transform: translateX(100%);
     }
     to {
-      margin-left: 0%;
-      width: 100%;
+      /* margin-left: 0%;
+      width: 100%; */
+      transform: translateX(0%);
     }
   }
   @keyframes slide-left {
     from {
-      margin-left: -200%;
-      width: 0%;
+      /* margin-left: -200%;
+      width: 0%; */
+      transform: translateX(-100%);
     }
     to {
-      margin-left: 0%;
-      width: 96%;
+      /* margin-left: 0%;
+      width: 96%; */
+      transform: translateX(0%);
     }
   }
   @keyframes slide-up {
