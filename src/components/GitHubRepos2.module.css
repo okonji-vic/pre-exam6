@@ -10,7 +10,7 @@
     border: 0px solid;
     margin-top: -15px;
     animation-name: slide-in;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
   }
   
@@ -37,7 +37,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    animation: slide-left 4s ease-in-out;
+    animation: slide-left 2s ease-in-out;
   }
   
   .button:hover {
@@ -62,21 +62,20 @@
     padding: 0;
   }
   
-  .repoItem, .repoAvatar {
+  .repoItem{
     background-color: #f6f8fa;
     border: 1px solid #e1e4e8f1;
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
-  }
-  .repoItem {
     animation-name: slide-left;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
   }
+  
   .repoAvatar {
     animation-name: slide-up;
-    animation-duration: 3s;
+    animation-duration: 2s;
   }
   
   .repoItem h3, .repoAvatar h3 {
@@ -151,7 +150,7 @@
 
   input, select {
     animation-name: slide-in;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     
   }

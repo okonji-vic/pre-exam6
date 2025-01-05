@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 2rem;
     font-family: Arial, sans-serif;
+    
   }
   
   .title {
@@ -14,12 +15,24 @@
     animation-duration: 2s;
     z-index: 0;
   }
+
+  .allRepos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    animation-name: slide-in;
+    animation-duration: 2s;
+  }
   @keyframes slide-in {
     from {
-      margin-top: -100%;
+      /* margin-top: -100%; */
+      opacity: 0;
+      transform: translateY(-100%);
     }
     to {
-      margin-top: 3%;
+      /* margin-top: 3%; */
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
@@ -63,7 +76,9 @@
   .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 0 auto;
+    /* width: 200%; */
+    border: px solid #e1e4e8;
   }
   
   .pageButton {
