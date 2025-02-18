@@ -5,6 +5,8 @@
     gap: 1rem;
     /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     grid-template-columns: 1fr 2fr;
+    margin-bottom: 0;
+    border: px solid red;
   }
   
   .title {
@@ -80,7 +82,7 @@
   }
 
   .repoContainer {
-    border: 0px solid red;
+    border: px solid red;
     overflow-x: auto;
     height: 80vh;
     margin-bottom: 0;
