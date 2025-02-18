@@ -98,7 +98,18 @@ const GitHubRepos2 = ({
   const totalPages = Math.ceil(filteredRepos.length / itemsPerPage);
 
   return (
+    <>
+      <h1 className={styles.title}>GitHub Repositories for {username}</h1>
+      <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Search repositories"
+              className={styles.input}
+              id={styles.searchInput}
+        />
     <div className={styles.container}>
+      <div className={styles.avatarContainer}>
       <ul id={styles.avatarUl}>
       {currentRepos.slice(0, 1).map((repo) => (
         <li key={repo.id} className={styles.repoAvatar}>
@@ -115,7 +126,7 @@ const GitHubRepos2 = ({
     </ul>
       
       
-      <h1 className={styles.title}>GitHub Repositories for {username}</h1>
+      
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="text"
@@ -148,13 +159,7 @@ const GitHubRepos2 = ({
           <option value="hasprojects">Has Projects</option>
           <option value="hasdownloads">Has Downloads</option>
         </select>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Search repositories"
-          className={styles.input}
-        />
+        
         <select
           value={itemsPerPage}
           onChange={(e) => setItemsPerPage(Number(e.target.value))}
@@ -163,9 +168,18 @@ const GitHubRepos2 = ({
           <option value="5">5 per page</option>
           <option value="10">10 per page</option>
           <option value="20">20 per page</option>
-        </select>
+            </select>
+            <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Search repositories"
+              className={styles.input}
+              id={styles.searchInput2}
+        />
       </div>
-      
+      </div>
+      <div className={styles.repoContainer}>
       <ul className={styles.repoList}>
       
     {filteredRepos.length === 0 && inputValue.length != 0 && (
@@ -200,8 +214,10 @@ const GitHubRepos2 = ({
             {page}
           </button>
         ))}
+        </div>
+        </div>
       </div>
-    </div>
+      </>
   );
 };
 

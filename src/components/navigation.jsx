@@ -39,7 +39,7 @@ isActive
     }>About</NavLink>
         </li>
         <li className={styles.navItem}>
-            <NavLink to="/error" className={styles.navLink} style={({ isActive }) =>
+            <NavLink to="/contact" className={styles.navLink} style={({ isActive }) =>
 isActive
 ? {
 
@@ -52,9 +52,9 @@ isActive
         : {
             color: "white", 
           }
-    }>Error</NavLink>
+    }>Contact</NavLink>
         </li>
-        <li className={styles.navItem}>
+        {/* <li className={styles.navItem}>
             <NavLink to="/custom404" className={styles.navLink} style={({ isActive }) =>
 isActive
 ? {
@@ -69,7 +69,7 @@ isActive
             color: "white", 
           }
     }>Custom 404</NavLink>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

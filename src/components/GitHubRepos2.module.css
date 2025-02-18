@@ -1,6 +1,10 @@
 .container {
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-template-columns: 1fr 2fr;
   }
   
   .title {
@@ -45,7 +49,7 @@
   }
   
   .filterContainer {
-    display: flex;
+    /* display: flex; */
     gap: 1rem;
     margin-bottom: 1rem;
   }
@@ -55,7 +59,42 @@
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    width: 100%;
   }
+
+  #searchInput {
+    margin: 0.5rem auto;
+    width: 98%;
+    
+  }
+
+  #searchInput2 {
+    display: none;
+    margin: 0.5rem auto;
+    
+  }
+
+  .avatarContainer {
+    margin-top: 1rem;
+  }
+
+  .repoContainer {
+    border: 0px solid red;
+    overflow-x: auto;
+    height: 80vh;
+    margin-bottom: 0;
+  }
+
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Edge */
+  }
+
   
   .repoList {
     list-style-type: none;
@@ -68,10 +107,12 @@
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
-    animation-name: slide-left;
+    animation-name: slide-right;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
   }
+
+
   
   .repoAvatar {
     animation-name: slide-up;
@@ -197,8 +238,24 @@
       transform: translateY(0%);
     }
   }
+
+  @keyframes slide-right {
+    from {
+      /* margin-left: 100%;
+      width: 50%; */
+      transform: translateX(100%);
+    }
+    to {
+      /* margin-left: 0%;
+      width: 100%; */
+      transform: translateX(0%);
+    }
+  }
   
   @media (max-width: 668px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
     .form,
     .filterContainer {
       flex-direction: column;
@@ -215,6 +272,14 @@
   .repoItem, .repoAvatar {
     padding: 0.5rem;
     width: 95%;
+  }
+
+  #searchInput {
+    display: none;
+  }
+
+  #searchInput2 {
+    display: block;
   }
 }
   
