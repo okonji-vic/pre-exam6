@@ -34,7 +34,7 @@ To run the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/okonji-vic/github-repo01.git
+git clone https://github.com/okonji-vic/pre-exam6.git
 
 # Navigate to the project folder
 cd github-repo-explorer
