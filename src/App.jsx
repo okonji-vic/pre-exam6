@@ -25,7 +25,11 @@ const App = () => {
     fetch(`https://api.github.com/users/${username}/repos`)
       .then((response) => {
         if (!response.ok) {
+          if (response.status === 404) {
+            throw new Error("User not found");
+          }
           throw new Error(`HTTP error! Status: ${response.status}`);
+          
         }
         console.log(response);
         return response.json();
@@ -52,8 +56,31 @@ const App = () => {
         <ClipLoader color="#36d7b7" size={50} />
       </div>
     );
+  
+  if (error)
+    return (
+      <div className={styles.error}>
+        <h1>Error: {error}</h1>
+        <button className={styles.button}>
+          <a href="/">Go to Home page</a>
+        </button>
+      </div>
+    );
 
-  if (error) return <p className={styles.error}>Error: {error}</p>;
+  // if (error) return <p className={styles.error}>Error: {error}</p>;
+  // if (error === "User not found") {
+  //   return (
+  //     <div className={styles.error}>
+  //       <h1>User not found</h1>
+  //       <button className={styles.button}>
+  //         <a href="/">Go to Home page</a>
+  //       </button>
+  //     </div>
+  //   );
+  // }
+
+
+
 
   return (
     <Layout>
